@@ -11,6 +11,10 @@ const res: CustomResponse = {
 const req = {};
 const next = jest.fn();
 
+beforeEach(() => {
+  jest.clearAllMocks();
+});
+
 describe("Given a notFoundError function", () => {
   describe("When it receives a next function", () => {
     test("Then it should call it with the custom error with status code 404 and message 'Sorry endpoint not found'", () => {
